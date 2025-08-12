@@ -1,0 +1,15 @@
+:root {
+  --color-primary: #7B24E2;   /* Roxo vibrante */
+  --color-secondary: #1D3777; /* Azul escuro */
+  --color-accent: #3C2F5A;    /* Roxo profundo */
+  --color-light: #BAB1C8;     /* Lilás claro */
+  --color-highlight: #A15AE8; /* Roxo médio */
+  --color-info: #69A0B7;      /* Azul acinzentado */
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}

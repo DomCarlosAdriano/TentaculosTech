@@ -1,0 +1,106 @@
+.hero {
+  width: 100vw;
+  height: 100vh;
+  background: url("/bg-hero-desktop.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  display: flex;
+  align-items: center;
+}
+
+.animationHero {
+  width: 1000px;
+}
+
+.content {
+  margin: auto;
+  width: 90%;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.textHero {
+  width: 600px;
+}
+
+.subtitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #c084fc; /* roxo claro */
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.text {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: #ddd;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.primaryBtn {
+  background: linear-gradient(90deg, #a855f7, #7e22ce);
+  border: none;
+  padding: 0.8rem 1.6rem;
+  font-size: 1.1rem;
+  color: white;
+  font-weight: bold;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.secondaryBtn {
+  background: transparent;
+  border: 1px solid #a855f7;
+  font-size: 1.1rem;
+  padding: 0.8rem 1.6rem;
+  color: white;
+  font-weight: bold;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+/* Responsivo para mobile */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .animationHero {
+    width: 400px;
+  }
+
+  .hero {
+    background: url("/bg-hero-mobile.svg") no-repeat center/cover;
+    padding: 4rem 1.5rem;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    width: 100%;
+    text-align: center;
+  }
+}
