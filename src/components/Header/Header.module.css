@@ -1,47 +1,47 @@
 .header {
-  padding: 1.5rem 0;
+  padding: 1.2rem 0;
   position: absolute;
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: center;
 }
 
 .container {
   width: 90%;
-  max-width: 1800px;
+  max-width: 100rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 1rem;
 }
 
 .logoContainer {
   display: flex;
   align-items: center;
+  gap: 1rem;
 }
 
-.logoBackground{
+.logoBackground {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50px;
-  height: 50px;
-  background: #12042a;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  border: solid 2px #ffffff; /* roxo claro */
+  background: none;
 }
 
 .logoImg {
-  height: 40px;
+  height: 30px; /* Logo menor em telas pequenas */
+  max-width: 100%;
 }
 
 .logoText {
-  color: #ffffff; 
-  font-size: 1.5rem;
+  color: #ffffff;
+  font-size: 1.5rem; /* Ajuste na fonte para telas grandes */
   font-weight: bold;
   margin-left: 0.5rem;
 }
-
-
 
 .navDesktop {
   display: flex;
@@ -50,20 +50,30 @@
 
 .navDesktop a {
   color: white;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navDesktop a:hover {
+  color: #a855f7; /* Efeito de hover */
 }
 
 .sellButton {
   background: linear-gradient(90deg, #a855f7, #7c3aed);
   color: white;
   border: none;
-  padding: 0.5rem 1.2rem;
   border-radius: 20px;
   font-weight: bold;
   cursor: pointer;
-  font-size: 1.3rem;
+  padding: 0.7rem 1.5rem; /* Maior padding em telas grandes */
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.sellButton:hover {
+  background: linear-gradient(90deg, #7c3aed, #a855f7); /* Efeito no hover */
 }
 
 .hamburger {
@@ -75,12 +85,14 @@
 
 .hamburger span {
   display: block;
-  width: 25px;
-  height: 3px;
+  width: 30px;
+  height: 4px;
   background: white;
-  border-radius: 2px;
+  border-radius: 3px;
+  transition: transform 0.3s ease;
 }
 
+/* Menu mobile */
 .navMobile {
   position: absolute;
   top: 100%;
@@ -91,25 +103,70 @@
   flex-direction: column;
   gap: 1rem;
   padding: 1.5rem;
+  transform: translateY(-100%); /* Inicialmente escondido */
+  transition: transform 0.3s ease-in-out;
+}
+
+.navMobile.open {
+  transform: translateY(0); /* Quando aberto, a transição é suave */
 }
 
 .navMobile a {
   color: white;
   text-decoration: none;
   font-weight: 500;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.navMobile a:hover {
+  color: #a855f7;
 }
 
 /* Responsividade */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+  .logoText {
+    font-size: 1.2rem; /* Ajusta o tamanho da fonte da logo para tablets */
+  }
+
   .navDesktop {
-    display: none;
+    gap: 1.5rem; /* Menos espaçamento entre os links */
   }
 
   .sellButton {
-    display: none;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (max-width: 850px) {
+  .navDesktop {
+    display: none; /* Esconde menu desktop em telas pequenas */
+  }
+
+  .sellButton {
+    display: none; /* Esconde botão em telas pequenas */
   }
 
   .hamburger {
-    display: flex;
+    display: flex; /* Exibe o menu hamburguer */
+  }
+
+  .logoContainer {
+    gap: 0.5rem; /* Menor distância entre logo e texto */
+  }
+}
+
+@media (max-width: 480px) {
+  .logoImg {
+    height: 25px; /* Logo ainda menor em dispositivos muito pequenos */
+  }
+
+  .logoText {
+    font-size: 1rem; /* Logo com texto menor */
+  }
+
+  .navMobile a {
+    font-size: 1rem; /* Ajuste no tamanho das fontes do menu */
   }
 }

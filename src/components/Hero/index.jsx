@@ -19,7 +19,7 @@ export default function Hero() {
           </p>
           <div className={styles.buttons}>
             <button className={styles.primaryBtn}>Solicitar Orçamento Gratuito</button>
-            <button className={styles.secondaryBtn}>Contact Sales</button>
+            <button className={styles.secondaryBtn}>Contato Vendas</button>
           </div>
         </div>
 
@@ -32,3 +32,4 @@ export default function Hero() {
     </section>
   );
 }
+

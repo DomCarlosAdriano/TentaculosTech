@@ -12,19 +12,20 @@ export default function Header() {
 
         <div className={styles.logoContainer}>
 
-          {/* <div className={styles.logoBackground}>
+          <div className={styles.logoBackground}>
             <img src={logo} alt="Logo" className={styles.logoImg} />
-          </div> */}
+          </div> 
 
           <h3 className={styles.logoText}>TentaculosTech</h3>
         </div>
 
         {/* Menu desktop */}
         <nav className={styles.navDesktop}>
-          <a href="#overview">Overview</a>
-          <a href="#features">Features</a>
-          <a href="#pricing">Pricing</a>
-          <a href="#about">About</a>
+          <a href="#overview">Home</a>
+          <a href="#features">Serviços</a>
+          <a href="#pricing">Processo</a>
+          <a href="#about">EQ's</a>
+          <a href="#about">Portifolio</a>
         </nav>
 
         {/* Botão SELL (desktop) */}
@@ -60,4 +61,4 @@ export default function Header() {
       )}
     </header>
   );
-}
+} 
