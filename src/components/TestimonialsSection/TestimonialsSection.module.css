@@ -33,10 +33,12 @@
 }
 
 .card {
+  color: #a855f7;
   border-radius: 12px;
   padding: 24px;
   text-align: left;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border: solid 2px #a855f7;
 }
 
 .card:hover {
@@ -45,7 +47,7 @@
 }
 
 .highlight {
-  color: #fff;
+  color: #a855f7;
 }
 
 .cardHeader {
@@ -71,7 +73,7 @@
 .card p {
   margin: 0;
   font-size: 0.85rem;
-  color: #555;
+  color: #ffffff;
 }
 
 .text {
@@ -96,7 +98,7 @@
   padding: 8px 14px;
   border: 1px solid #ddd;
   border-radius: 50%;
-  color: #333;
+  color: #fff;
   text-decoration: none;
   font-size: 1rem;
   cursor: pointer;
@@ -104,13 +106,12 @@
 }
 
 .pageItem:hover .pageLink {
-  border-color: #ff5c5c;
-  color: #ff5c5c;
+  border-color: #a855f7;
+  color: #fff;
 }
 
 .active .pageLink {
-  background: #ff5c5c;
-  border-color: #ff5c5c;
+  background: #a855f7;
   color: #fff;
 }
 
