@@ -11,11 +11,7 @@ export default function Header() {
         {/* Logo */}
 
         <div className={styles.logoContainer}>
-
-          <div className={styles.logoBackground}>
-            <img src={logo} alt="Logo" className={styles.logoImg} />
-          </div> 
-
+          <img src={logo} alt="Logo" className={styles.logoImg} />
           <h3 className={styles.logoText}>TentaculosTech</h3>
         </div>
 
@@ -44,7 +40,8 @@ export default function Header() {
 
       {/* Menu mobile aberto */}
       {menuOpen && (
-        <nav className={styles.navMobile}>
+        <nav className={styles.navMobile} onClick={() => setMenuOpen(false)}>
+          <div className={styles.closeButton}>x</div>
           <a href="#overview" onClick={() => setMenuOpen(false)}>
             Overview
           </a>
@@ -57,8 +54,11 @@ export default function Header() {
           <a href="#about" onClick={() => setMenuOpen(false)}>
             About
           </a>
+          <a href="#contact" onClick={() => setMenuOpen(false)}>
+            Contato
+          </a>
         </nav>
       )}
     </header>
   );
-} 
+}

@@ -18,17 +18,6 @@
 .logoContainer {
   display: flex;
   align-items: center;
-  gap: 1rem;
-}
-
-.logoBackground {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: none;
 }
 
 .logoImg {
@@ -40,7 +29,6 @@
   color: #ffffff;
   font-size: 1.5rem; /* Ajuste na fonte para telas grandes */
   font-weight: bold;
-  margin-left: 0.5rem;
 }
 
 .navDesktop {
@@ -94,11 +82,14 @@
 
 /* Menu mobile */
 .navMobile {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: #0f0221;
   width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 100vh;
+  left: 0;
+  z-index: 2;
+  background: #0f0221;
+
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -109,6 +100,12 @@
 
 .navMobile.open {
   transform: translateY(0); /* Quando aberto, a transição é suave */
+}
+
+.closeButton{
+  text-align: end;
+  color: white;
+  font-size: 1.5rem;
 }
 
 .navMobile a {
@@ -152,9 +149,7 @@
     display: flex; /* Exibe o menu hamburguer */
   }
 
-  .logoContainer {
-    gap: 0.5rem; /* Menor distância entre logo e texto */
-  }
+
 }
 
 @media (max-width: 480px) {

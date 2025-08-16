@@ -1,0 +1,66 @@
+.container {
+  background: #0a0024;
+  color: #fff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.service {
+  color: #ff9500;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  color: #ccc;
+  max-width: 600px;
+  margin: 0 auto 3rem auto;
+  font-size: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.card {
+  text-align: left;
+}
+
+.card h3 {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+.card p {
+  color: #aaa;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.icon {
+  font-size: 2rem;
+  color: #9d4edd;
+  margin-bottom: 0.5rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .card {
+    text-align: center;
+  }
+}
